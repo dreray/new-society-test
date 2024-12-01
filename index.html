@@ -3,38 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Society Test</title>
+    <title>National Champion Radio - Celebrating Excellence</title>
     <style>
+        :root {
+            --gold-primary: #FFD700;
+            --gold-dark: #B8860B;
+            --gold-accent: #DAA520;
+            --dark-bg: #1A1A1A;
+            --darker-bg: #0F0F0F;
+            --light-text: #FFFFFF;
+        }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
+            background-color: var(--darker-bg);
+            color: var(--light-text);
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 3px solid var(--gold-primary);
+            margin-bottom: 40px;
         }
         h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            color: var(--gold-primary);
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        .content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .tagline {
+            font-size: 1.4em;
+            color: var(--light-text);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .mission, .featured-winners, .about, .join-us {
+            background-color: var(--dark-bg);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 1px solid var(--gold-dark);
         }
         h2 {
-            color: #34495e;
+            color: var(--gold-primary);
+            font-size: 2em;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--gold-accent);
+            padding-bottom: 15px;
+        }
+        .winner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .winner-card {
+            background-color: rgba(255, 215, 0, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--gold-accent);
+        }
+        .winner-card h3 {
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--gold-primary);
+            color: var(--darker-bg);
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cta-button:hover {
+            background-color: var(--gold-dark);
+            color: var(--light-text);
+            transform: translateY(-2px);
+        }
+        .quote {
+            font-style: italic;
+            font-size: 1.2em;
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 4px solid var(--gold-primary);
+            background-color: rgba(255, 215, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to New Society</h1>
-    <p>This is a simple test page for our repository.</p>
-    <div class="content">
-        <h2>About Us</h2>
-        <p>We're building something amazing here. Stay tuned for more updates!</p>
+    <div class="hero">
+        <h1>National Champion Radio</h1>
+        <p class="tagline">Celebrating America's Most Distinguished Prize Winners</p>
+        <a href="#join-us" class="cta-button">Listen Now</a>
+    </div>
+
+    <div class="mission">
+        <h2>Our Mission</h2>
+        <p>National Champion Radio celebrates the remarkable achievements of U.S. citizens who have earned the world's most prestigious awards. From Nobel laureates to Oscar winners, from the Turing Award to the Japan Prize, we spotlight the extraordinary individuals who push the boundaries of human achievement.</p>
+        <div class="quote">
+            "We aim to create a beacon which radiates brightly those elements which help not just our nation but our entire species flourish this century and beyond."
+        </div>
+    </div>
+
+    <div class="featured-winners">
+        <h2>Featured Champions</h2>
+        <div class="winner-grid">
+            <div class="winner-card">
+                <h3>Carrie Fowler</h3>
+                <p>World Food Prize Winner</p>
+                <p>Co-creator of the Fallard Global Seed Bank, preserving over 1 million seeds for humanity's future.</p>
+            </div>
+            <div class="winner-card">
+                <h3>Teresa H. Main</h3>
+                <p>Marconi Prize 2024</p>
+                <p>Pioneering work in bringing Wi-Fi technology to the world, revolutionizing global connectivity.</p>
+            </div>
+            <div class="winner-card">
+                <h3>Omar Yagi</h3>
+                <p>Tang Prize Winner</p>
+                <p>Groundbreaking chemistry research enabling water harvesting from desert air.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <h2>About National Champions Institute</h2>
+        <p>The National Champions Institute serves as a beacon of excellence, highlighting those who exemplify the leadership this century requires. Our mission extends beyond recognition – we aim to inspire the next generation of leaders, innovators, and changemakers.</p>
+        <p>Through our podcast and broader initiatives, we showcase the values, dedication, and excellence that define true championship in fields ranging from science and technology to arts and humanitarian work.</p>
+    </div>
+
+    <div class="join-us" id="join-us">
+        <h2>Join Our Journey</h2>
+        <p>Be part of a movement that celebrates excellence, inspires leadership, and shapes the future. Subscribe to our podcast and join us in spotlighting the remarkable individuals who are defining this century's achievements.</p>
+        <a href="https://www.youtube.com/@Nat_Champions" class="cta-button" target="_blank">Subscribe Now</a>
     </div>
 </body>
 </html>
